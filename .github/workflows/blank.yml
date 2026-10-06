@@ -11,10 +11,4 @@ qemu-system-x86_64 \
   -netdev user,id=net0 \
   -vga virtio \
   -bios /usr/share/OVMF/OVMF_CODE.fdCPU
-  8 vCPUs
-RAM:        32 GB
-Disco:      150–250 GB NVMe
-GPU:        RTX 4070 SUPER via GPU Passthrough
-Rede:       VirtIO
-Firmware:   UEFI/OVMF
-Virtualização: KVM
+  8 vCPU
