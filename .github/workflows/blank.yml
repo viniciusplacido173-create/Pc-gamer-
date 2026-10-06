@@ -1,0 +1,20 @@
+qemu-system-x86_64 \
+  -enable-kvm \
+  -machine q35 \
+  -cpu host \
+  -smp 8 \
+  -m 16G \
+  -drive file=windows11.qcow2,if=virtio,format=qcow2 \
+  -cdrom Windows11.iso \
+  -boot order=d \
+  -device virtio-net-pci,netdev=net0 \
+  -netdev user,id=net0 \
+  -vga virtio \
+  -bios /usr/share/OVMF/OVMF_CODE.fdCPU
+  8 vCPUs
+RAM:        32 GB
+Disco:      150–250 GB NVMe
+GPU:        RTX 4070 SUPER via GPU Passthrough
+Rede:       VirtIO
+Firmware:   UEFI/OVMF
+Virtualização: KVM
